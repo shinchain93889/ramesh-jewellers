@@ -17,18 +17,18 @@ export default function GoldPage() {
     <div className="flex min-h-screen flex-col bg-background">
       <Navbar />
       <main className="flex-1">
-        <header className="bg-secondary py-24 text-center border-b border-primary/20">
+        <header className="bg-secondary py-16 md:py-24 text-center border-b border-primary/20">
           <div className="container mx-auto px-4">
-            <h1 className="text-5xl font-headline font-bold mb-4">The <span className="gold-gradient">Gold</span> Collection</h1>
-            <p className="text-muted-foreground tracking-widest uppercase text-xs">22K & 24K Pure Craftsmanship</p>
+            <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">The <span className="gold-gradient">Gold</span> Collection</h1>
+            <p className="text-muted-foreground tracking-widest uppercase text-[10px] md:text-xs">22K & 24K Pure Craftsmanship</p>
           </div>
         </header>
 
-        <section className="py-24 container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <section className="py-16 md:py-24 container mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             {goldItems.map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
-                <div className="relative h-[400px] border border-primary/10 overflow-hidden mb-6">
+                <div className="relative h-[350px] md:h-[450px] border border-primary/10 overflow-hidden mb-6">
                   <Image 
                     src={PlaceHolderImages[idx % PlaceHolderImages.length].imageUrl}
                     alt={item.name}
@@ -41,8 +41,8 @@ export default function GoldPage() {
                 </div>
                 <div className="text-center space-y-1">
                   <span className="text-[10px] text-primary uppercase tracking-[0.2em]">{item.category}</span>
-                  <h3 className="text-xl font-headline font-bold">{item.name}</h3>
-                  <p className="text-muted-foreground font-light">{item.price}</p>
+                  <h3 className="text-lg md:text-xl font-headline font-bold">{item.name}</h3>
+                  <p className="text-muted-foreground font-light text-sm md:text-base">{item.price}</p>
                 </div>
               </div>
             ))}
