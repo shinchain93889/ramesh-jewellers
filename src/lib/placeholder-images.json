@@ -3,44 +3,62 @@
     {
       "id": "hero-ring",
       "description": "Exquisite gold diamond ring",
-      "imageUrl": "https://images.unsplash.com/photo-1600143674013-a690b5d25104?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkaWFtb25kJTIwcmluZ3xlbnwwfHx8fDE3NzA4NDAxODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1600143674013-a690b5d25104?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
       "imageHint": "diamond ring"
     },
     {
       "id": "hero-necklace",
       "description": "Elegant gold necklace collection",
-      "imageUrl": "https://images.unsplash.com/photo-1601121141499-17ae80afc03a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnb2xkJTIwbmVja2xhY2V8ZW58MHx8fHwxNzcwODcxMTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1601121141499-17ae80afc03a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
       "imageHint": "gold necklace"
     },
     {
       "id": "hero-earrings",
       "description": "Luxury diamond earrings",
-      "imageUrl": "https://images.unsplash.com/photo-1724937798223-720f8956cb12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkaWFtb25kJTIwZWFycmluZ3N8ZW58MHx8fHwxNzcwODcxMTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1724937798223-720f8956cb12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
       "imageHint": "diamond earrings"
     },
     {
-      "id": "service-custom",
-      "description": "Jewelry designer sketching a ring",
-      "imageUrl": "https://images.unsplash.com/photo-1689743801114-230453abfceb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxqZXdlbHJ5JTIwZGVzaWdufGVufDB8fHx8MTc3MDg3OTgyNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "jewelry design"
+      "id": "cat-rings",
+      "description": "Gold rings collection",
+      "imageUrl": "https://images.unsplash.com/photo-1598560917505-59a3ad559071?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageHint": "gold rings"
     },
     {
-      "id": "service-repair",
-      "description": "Jeweler repairing a delicate piece",
-      "imageUrl": "https://images.unsplash.com/photo-1623304741393-54f6c11c0da6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxqZXdlbHJ5JTIwcmVwYWlyfGVufDB8fHx8MTc3MDg3OTgyNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "jewelry repair"
+      "id": "cat-necklaces",
+      "description": "Intricate gold necklaces",
+      "imageUrl": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageHint": "gold necklace"
     },
     {
-      "id": "service-cleaning",
-      "description": "Professional jewelry cleaning tools",
-      "imageUrl": "https://images.unsplash.com/photo-1724896728449-fae038f93e59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxqZXdlbHJ5JTIwY2xlYW5pbmd8ZW58MHx8fHwxNzcwODc5ODI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "jewelry cleaning"
+      "id": "cat-bangles",
+      "description": "Traditional gold bangles",
+      "imageUrl": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageHint": "gold bangles"
     },
     {
-      "id": "collection-bridal",
-      "description": "Bridal jewelry set",
-      "imageUrl": "https://images.unsplash.com/photo-1606038166690-581c8bcc0897?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxicmlkYWwlMjBqZXdlbHJ5fGVufDB8fHx8MTc3MDgwNzMyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "cat-earrings",
+      "description": "Ornate gold earrings",
+      "imageUrl": "https://images.unsplash.com/photo-1617038220319-276d3cfab638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageHint": "gold earrings"
+    },
+    {
+      "id": "cat-bridal",
+      "description": "Full bridal jewelry set",
+      "imageUrl": "https://images.unsplash.com/photo-1606038166690-581c8bcc0897?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
       "imageHint": "bridal jewelry"
+    },
+    {
+      "id": "cat-chains",
+      "description": "Elegant gold chains",
+      "imageUrl": "https://images.unsplash.com/photo-1620912189865-1e8a33da4c5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageHint": "gold chain"
+    },
+    {
+      "id": "silver-section",
+      "description": "Fine silver jewelry collection",
+      "imageUrl": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "silver jewelry"
     }
   ]
 }

@@ -1,51 +1,29 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 240 100% 99%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 46 65% 52%; /* Deep Gold #D4AF37 */
-    --primary-foreground: 0 0% 98%;
-    --secondary: 345 100% 25%; /* Burgundy #800020 */
-    --secondary-foreground: 0 0% 98%;
-    --muted: 46 10% 90%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 345 80% 40%;
-    --accent-foreground: 0 0% 98%;
+    --background: 0 0% 2%; /* Near Black */
+    --foreground: 0 0% 98%; /* Off White */
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 46 65% 52%; /* Classic Gold */
+    --primary-foreground: 0 0% 5%;
+    --secondary: 0 0% 10%; /* Dark Charcoal */
+    --secondary-foreground: 46 65% 52%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 46 65% 62%;
+    --accent-foreground: 0 0% 5%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 46 30% 85%;
-    --input: 46 30% 85%;
+    --border: 46 30% 20%;
+    --input: 46 30% 20%;
     --ring: 46 65% 52%;
-    --radius: 0.5rem;
-  }
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 46 65% 52%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 345 100% 25%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 46 65% 52%;
+    --radius: 0rem; /* Elegant Sharp Corners */
   }
 }
 
@@ -58,6 +36,20 @@
     font-family: 'PT Sans', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
     font-family: 'Playfair Display', serif;
+    letter-spacing: 0.02em;
   }
+}
+
+.gold-gradient {
+  background: linear-gradient(45deg, #B8860B, #FFD700, #DAA520, #B8860B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--background), var(--background)) padding-box,
+              linear-gradient(45deg, #B8860B, #FFD700, #DAA520) border-box;
 }
