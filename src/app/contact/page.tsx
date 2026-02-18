@@ -17,15 +17,15 @@ export default function ContactPage() {
           </div>
         </header>
         <ContactSection />
-        
+
         {/* Simple Map Placeholder Section */}
         <section className="h-[400px] w-full bg-muted relative">
-           <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-lg italic">
-              <div className="text-center">
-                <p>Map Integration placeholder</p>
-                <p className="text-sm">Ramesh Jewellers, 123 Gold Bazaar Street, Mumbai</p>
-              </div>
-           </div>
+          <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-lg italic">
+            <div className="text-center">
+              <p>Map Integration placeholder</p>
+              <p className="text-sm">Ramesh Jewellers, Transit Camp (Rudrapur), Shamshan Ghat Road, Udham Singh Nagar</p>
+            </div>
+          </div>
         </section>
       </main>
       <Footer />

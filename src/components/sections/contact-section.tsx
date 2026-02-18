@@ -66,7 +66,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-headline font-bold text-lg">Address</h4>
-                  <p className="text-muted-foreground">123 Gold Bazaar Street, Diamond District,<br />Mumbai, Maharashtra 400001</p>
+                  <p className="text-muted-foreground">Transit Camp (Rudrapur), Shamshan Ghat Road,<br />Udham Singh Nagar</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -75,7 +75,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-headline font-bold text-lg">Phone</h4>
-                  <p className="text-muted-foreground">+91 22 1234 5678</p>
+                  <p className="text-muted-foreground">+91 97207 98940</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -93,7 +93,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-headline font-bold text-lg">Business Hours</h4>
-                  <p className="text-muted-foreground">Mon - Sat: 10:30 AM - 8:30 PM<br />Sun: Closed</p>
+                  <p className="text-muted-foreground">Sun - Sat: 9:00 AM - 9:00 PM<br />Monday: Closed</p>
                 </div>
               </div>
             </div>

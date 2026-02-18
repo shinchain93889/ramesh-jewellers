@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { getMetalRates } from '@/lib/metals';
 
 const categories = [
   { id: 'cat-rings', title: 'Rings', link: '/gold' },
@@ -16,13 +17,68 @@ const categories = [
   { id: 'cat-chains', title: 'Chains', link: '/gold' },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const rates = await getMetalRates();
+
+  // Defaults (Fallback to estimated Feb 2026 rates if API fails)
+  const fallbackDate = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
+  const displayDate = rates?.lastUpdated || fallbackDate;
+
+  // Base rates per gram
+  const gold24kPerGram = rates ? rates.gold.price24K : 15643;
+  const gold22kPerGram = rates ? rates.gold.price22K : 14339;
+  const silver1gPrice = rates ? rates.silver.price1Gram : 260;
+  const silver1kgPrice = rates ? rates.silver.price1Kg : 260000;
+
+  // Display Rates (Gold per 10g as requested)
+  const gold24k_10g = gold24kPerGram * 10;
+  const gold22k_10g = gold22kPerGram * 10;
+
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 0,
+    }).format(price);
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Navbar />
       <main className="flex-1">
         <HeroCarousel />
-        
+
+        {/* Daily Rates Section */}
+        <section className="py-12 bg-secondary/20 border-b border-primary/10">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="text-center md:text-left">
+                <h3 className="text-xl md:text-2xl font-headline font-bold mb-2">Today's <span className="gold-gradient">Gold & Silver</span> Rates</h3>
+                <p className="text-muted-foreground text-xs uppercase tracking-widest">As of {displayDate}</p>
+                {!rates && <p className="text-[10px] text-red-400 mt-1">*Live rates unavailable, showing estimates</p>}
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 w-full md:w-auto">
+                <div className="bg-background p-4 border border-primary/20 text-center min-w-[120px]">
+                  <span className="block text-[10px] text-muted-foreground uppercase tracking-widest mb-1">Gold 24K (10g)</span>
+                  <span className="text-lg font-bold text-primary">{formatPrice(gold24k_10g)}</span>
+                </div>
+                <div className="bg-background p-4 border border-primary/20 text-center min-w-[120px]">
+                  <span className="block text-[10px] text-muted-foreground uppercase tracking-widest mb-1">Gold 22K (10g)</span>
+                  <span className="text-lg font-bold text-primary">{formatPrice(gold22k_10g)}</span>
+                </div>
+                <div className="bg-background p-4 border border-primary/20 text-center min-w-[120px]">
+                  <span className="block text-[10px] text-muted-foreground uppercase tracking-widest mb-1">Silver (1g)</span>
+                  <span className="text-lg font-bold text-slate-500">{formatPrice(silver1gPrice)}</span>
+                </div>
+                <div className="bg-background p-4 border border-primary/20 text-center min-w-[120px]">
+                  <span className="block text-[10px] text-muted-foreground uppercase tracking-widest mb-1">Silver (1kg)</span>
+                  <span className="text-lg font-bold text-slate-500">{formatPrice(silver1kgPrice)}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Collections Grid */}
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
@@ -38,7 +94,7 @@ export default function Home() {
                 return (
                   <Link href={cat.link} key={idx} className="group relative h-[350px] md:h-[450px] overflow-hidden border border-primary/10">
                     {img && (
-                      <Image 
+                      <Image
                         src={img.imageUrl}
                         alt={img.description}
                         fill
@@ -61,12 +117,12 @@ export default function Home() {
 
         {/* Featured Teaser Section */}
         <section className="py-16 md:py-24 bg-secondary/30 relative overflow-hidden">
-           <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
               <div className="w-full lg:w-1/2 relative h-[400px] md:h-[600px]">
                 <div className="absolute inset-0 border border-primary/30 translate-x-4 translate-y-4 hidden md:block"></div>
                 {PlaceHolderImages.find(img => img.id === 'cat-bridal') && (
-                  <Image 
+                  <Image
                     src={PlaceHolderImages.find(img => img.id === 'cat-bridal')!.imageUrl}
                     alt="Bridal Masterpiece"
                     fill

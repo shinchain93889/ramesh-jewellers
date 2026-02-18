@@ -23,7 +23,7 @@ export function Footer() {
             <Link href="#" className="text-muted-foreground hover:text-primary transition-colors"><Twitter size={20} /></Link>
           </div>
         </div>
-        
+
         <div className="space-y-6">
           <h4 className="text-xs uppercase tracking-[0.3em] font-bold">Quick Links</h4>
           <ul className="space-y-4 text-sm font-light text-muted-foreground">
@@ -49,11 +49,11 @@ export function Footer() {
           <ul className="space-y-4 text-sm font-light text-muted-foreground">
             <li className="flex items-start space-x-3">
               <MapPin className="text-primary mt-1 shrink-0" size={16} />
-              <span>123 Gold Bazaar Street, Diamond District, Mumbai - 400001</span>
+              <span>Transit Camp (Rudrapur), Shamshan Ghat Road, Udham Singh Nagar</span>
             </li>
             <li className="flex items-center space-x-3">
               <Phone className="text-primary shrink-0" size={16} />
-              <span>+91 22 1234 5678</span>
+              <span>+91 97207 98940</span>
             </li>
             <li className="flex items-center space-x-3">
               <Mail className="text-primary shrink-0" size={16} />
