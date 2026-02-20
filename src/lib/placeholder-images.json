@@ -33,7 +33,7 @@
     {
       "id": "cat-bangles",
       "description": "Traditional gold bangles",
-      "imageUrl": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageUrl": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
       "imageHint": "gold bangles"
     },
     {
@@ -59,6 +59,18 @@
       "description": "Fine silver jewelry collection",
       "imageUrl": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
       "imageHint": "silver jewelry"
+    },
+    {
+      "id": "gold-pendant",
+      "description": "Elegant gold pendant",
+      "imageUrl": "https://images.unsplash.com/photo-1601121141499-17ae80afc03a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageHint": "gold pendant"
+    },
+    {
+      "id": "gold-stylish-pendant",
+      "description": "Stylish modern gold pendant",
+      "imageUrl": "https://images.unsplash.com/photo-1620912189865-1e8a33da4c5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageHint": "stylish gold pendant"
     }
   ]
 }
