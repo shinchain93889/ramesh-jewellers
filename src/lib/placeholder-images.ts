@@ -1,3 +1,4 @@
+// Forces HMR update
 import data from './placeholder-images.json';
 
 export type ImagePlaceholder = {

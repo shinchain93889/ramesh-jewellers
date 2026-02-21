@@ -27,13 +27,13 @@
     {
       "id": "cat-necklaces",
       "description": "Intricate gold necklaces",
-      "imageUrl": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageUrl": "/goldnecklace.jpg",
       "imageHint": "gold necklace"
     },
     {
       "id": "cat-bangles",
       "description": "Traditional gold bangles",
-      "imageUrl": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
+      "imageUrl": "/goldbangle.jpg",
       "imageHint": "gold bangles"
     },
     {
@@ -63,13 +63,13 @@
     {
       "id": "gold-pendant",
       "description": "Elegant gold pendant",
-      "imageUrl": "https://images.unsplash.com/photo-1601121141499-17ae80afc03a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageUrl": "/goldpendate.jpg",
       "imageHint": "gold pendant"
     },
     {
       "id": "gold-stylish-pendant",
       "description": "Stylish modern gold pendant",
-      "imageUrl": "https://images.unsplash.com/photo-1620912189865-1e8a33da4c5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageUrl": "/stylishpendate.jpg",
       "imageHint": "stylish gold pendant"
     }
   ]
