@@ -1,7 +1,11 @@
+"use client";
+
+import { useState } from 'react';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { QuickView } from '@/components/quick-view';
 
 const goldItems = [
   { name: 'Gold Bangle', category: 'Bangle', price: '₹1,20,000', imageId: 'cat-bangles' },
@@ -11,6 +15,14 @@ const goldItems = [
 ];
 
 export default function GoldPage() {
+  const [selectedItem, setSelectedItem] = useState<any>(null);
+  const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
+
+  const handleQuickView = (item: any, imageUrl: string) => {
+    setSelectedItem({ ...item, imageUrl });
+    setIsQuickViewOpen(true);
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Navbar />
@@ -26,8 +38,9 @@ export default function GoldPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             {goldItems.map((item, idx) => {
               const img = PlaceHolderImages.find(i => i.id === item.imageId);
+              const imageUrl = img?.imageUrl || '';
               return (
-                <div key={idx} className="group cursor-pointer">
+                <div key={idx} className="group cursor-pointer" onClick={() => handleQuickView(item, imageUrl)}>
                   <div className="relative h-[350px] md:h-[450px] border border-primary/10 overflow-hidden mb-6">
                     {img && (
                       <Image
@@ -38,7 +51,11 @@ export default function GoldPage() {
                       />
                     )}
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <button className="bg-primary text-black px-8 py-3 font-bold uppercase tracking-widest text-xs">Quick View</button>
+                      <button
+                        className="bg-primary text-black px-8 py-3 font-bold uppercase tracking-widest text-xs"
+                      >
+                        Quick View
+                      </button>
                     </div>
                   </div>
                   <div className="text-center space-y-1">
@@ -53,6 +70,13 @@ export default function GoldPage() {
         </section>
       </main>
       <Footer />
+
+      <QuickView
+        isOpen={isQuickViewOpen}
+        onClose={() => setIsQuickViewOpen(false)}
+        item={selectedItem}
+      />
     </div>
   );
 }
+

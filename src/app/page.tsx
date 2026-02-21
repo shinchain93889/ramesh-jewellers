@@ -7,6 +7,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { getMetalRates } from '@/lib/metals';
+import { CollectionsGrid } from '@/components/sections/collections-grid';
 
 const categories = [
   { id: 'cat-rings', title: 'Rings', link: '/gold' },
@@ -88,32 +89,10 @@ export default async function Home() {
               <div className="w-16 md:w-24 h-[1px] bg-primary mx-auto"></div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {categories.map((cat, idx) => {
-                const img = PlaceHolderImages.find(i => i.id === cat.id);
-                return (
-                  <Link href={cat.link} key={idx} className="group relative h-[350px] md:h-[450px] overflow-hidden border border-primary/10">
-                    {img && (
-                      <Image
-                        src={img.imageUrl}
-                        alt={img.description}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
-                        data-ai-hint={img.imageHint}
-                      />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 text-center">
-                      <h3 className="text-xl md:text-2xl font-headline font-bold text-white mb-2">{cat.title}</h3>
-                      <div className="w-12 h-[1px] bg-primary mx-auto mb-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                      <span className="text-[10px] uppercase tracking-[0.3em] text-primary opacity-0 group-hover:opacity-100 transition-opacity">View Collection</span>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
+            <CollectionsGrid categories={categories} />
           </div>
         </section>
+
 
         {/* Featured Teaser Section */}
         <section className="py-16 md:py-24 bg-secondary/30 relative overflow-hidden">

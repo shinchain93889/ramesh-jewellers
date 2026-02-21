@@ -1,11 +1,31 @@
+"use client";
+
+import { useState } from 'react';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { QuickView } from '@/components/quick-view';
+import { Button } from '@/components/ui/button';
 
 export default function SilverPage() {
+  const [selectedItem, setSelectedItem] = useState<any>(null);
+  const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
+
   const silverImg = PlaceHolderImages.find(img => img.id === 'silver-section');
-  
+
+  const handleQuickView = () => {
+    if (silverImg) {
+      setSelectedItem({
+        name: "Sterling Silver Collection",
+        imageUrl: silverImg.imageUrl,
+        category: ".925 Silver",
+        description: "Our sterling silver collection is designed for the modern woman who appreciates subtle luxury and timeless craftsmanship."
+      });
+      setIsQuickViewOpen(true);
+    }
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Navbar />
@@ -18,11 +38,14 @@ export default function SilverPage() {
         </header>
 
         <section className="py-24 container mx-auto px-4">
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div className="relative h-[600px] border border-slate-700">
-               {silverImg && (
-                 <Image src={silverImg.imageUrl} alt="Silver Collection" fill className="object-cover" />
-               )}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="relative h-[600px] border border-slate-700 group overflow-hidden cursor-pointer" onClick={handleQuickView}>
+              {silverImg && (
+                <Image src={silverImg.imageUrl} alt="Silver Collection" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              )}
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all flex items-center justify-center">
+                <Button className="opacity-0 group-hover:opacity-100 bg-white text-black rounded-none">Quick View</Button>
+              </div>
             </div>
             <div className="space-y-8">
               <h2 className="text-4xl font-headline font-bold">Modern <span className="italic">Minimalism</span></h2>
@@ -44,6 +67,12 @@ export default function SilverPage() {
         </section>
       </main>
       <Footer />
+
+      <QuickView
+        isOpen={isQuickViewOpen}
+        onClose={() => setIsQuickViewOpen(false)}
+        item={selectedItem}
+      />
     </div>
   );
 }
