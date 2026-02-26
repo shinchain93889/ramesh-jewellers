@@ -8,22 +8,24 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { QuickView } from '@/components/quick-view';
 import { Button } from '@/components/ui/button';
 
+const silverItems = [
+  { name: 'Pure Silver Choker', category: '.925 Silver', price: '₹12,500', imageId: 'silver-choker' },
+  { name: 'Silver Filigree Necklace', category: '.925 Silver', price: '₹18,900', imageId: 'silver-necklace' },
+  { name: 'Modern Silver Pendant', category: '.925 Silver', price: '₹8,200', imageId: 'silver-pendant' },
+  { name: 'Premium Silver Set', category: '.925 Silver', price: '₹25,000', imageId: 'silver-set' },
+];
+
 export default function SilverPage() {
   const [selectedItem, setSelectedItem] = useState<any>(null);
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
 
-  const silverImg = PlaceHolderImages.find(img => img.id === 'silver-section');
-
-  const handleQuickView = () => {
-    if (silverImg) {
-      setSelectedItem({
-        name: "Sterling Silver Collection",
-        imageUrl: silverImg.imageUrl,
-        category: ".925 Silver",
-        description: "Our sterling silver collection is designed for the modern woman who appreciates subtle luxury and timeless craftsmanship."
-      });
-      setIsQuickViewOpen(true);
-    }
+  const handleQuickView = (item: any, imageUrl: string) => {
+    setSelectedItem({
+      ...item,
+      imageUrl,
+      description: "Our sterling silver collection is designed for the modern woman who appreciates subtle luxury and timeless craftsmanship."
+    });
+    setIsQuickViewOpen(true);
   };
 
   return (
@@ -38,14 +40,38 @@ export default function SilverPage() {
         </header>
 
         <section className="py-24 container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div className="relative h-[600px] border border-slate-700 group overflow-hidden cursor-pointer" onClick={handleQuickView}>
-              {silverImg && (
-                <Image src={silverImg.imageUrl} alt="Silver Collection" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-              )}
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all flex items-center justify-center">
-                <Button className="opacity-0 group-hover:opacity-100 bg-white text-black rounded-none">Quick View</Button>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {silverItems.map((item, idx) => {
+              const img = PlaceHolderImages.find(i => i.id === item.imageId);
+              const imageUrl = img?.imageUrl || '';
+              return (
+                <div key={idx} className="group cursor-pointer" onClick={() => handleQuickView(item, imageUrl)}>
+                  <div className="relative h-[400px] border border-slate-700 overflow-hidden mb-6">
+                    {img && (
+                      <Image src={img.imageUrl} alt={item.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    )}
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <Button className="bg-white text-black rounded-none">Quick View</Button>
+                    </div>
+                  </div>
+                  <div className="text-center space-y-1">
+                    <span className="text-[10px] text-primary uppercase tracking-[0.2em]">{item.category}</span>
+                    <h3 className="text-lg font-headline font-bold">{item.name}</h3>
+                    <p className="text-muted-foreground font-light">{item.price}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="relative h-[600px] border border-slate-700 group overflow-hidden">
+              {(() => {
+                const img = PlaceHolderImages.find(i => i.id === 'silver-set');
+                return img && (
+                  <Image src={img.imageUrl} alt="Silver Collection" fill className="object-cover" />
+                );
+              })()}
             </div>
             <div className="space-y-8">
               <h2 className="text-4xl font-headline font-bold">Modern <span className="italic">Minimalism</span></h2>

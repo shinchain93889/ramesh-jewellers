@@ -5,13 +5,22 @@ import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { formatPrice } from '@/lib/utils';
 import { QuickView } from '@/components/quick-view';
 
 const goldItems = [
-  { name: 'Gold Bangle', category: 'Bangle', price: '₹1,20,000', imageId: 'cat-bangles' },
-  { name: 'Gold Necklace', category: 'Necklace', price: '₹2,45,000', imageId: 'cat-necklaces' },
-  { name: 'Gold Pendant', category: 'Pendant', price: '₹45,000', imageId: 'gold-pendant' },
-  { name: 'Gold Stylish Pendant', category: 'Pendant', price: '₹55,000', imageId: 'gold-stylish-pendant' },
+  { name: 'Gold Bangle', category: 'Bangle', price: 120000, imageId: 'cat-bangles' },
+  { name: 'Gold Necklace', category: 'Necklace', price: 245000, imageId: 'cat-necklaces' },
+  { name: 'Gold Pendant', category: 'Pendant', price: 45000, imageId: 'gold-pendant' },
+  { name: 'Gold Stylish Pendant', category: 'Pendant', price: 55000, imageId: 'gold-stylish-pendant' },
+  { name: 'Round Necklace', category: 'Necklace', price: 185000, imageId: 'round-necklace' },
+  { name: 'Rani Necklace', category: 'Necklace', price: 210000, imageId: 'rani-necklace' },
+  { name: 'Gold Necklace Design', category: 'Necklace', price: 195000, imageId: 'gold-necklace2' },
+  { name: 'Simple Gold Necklace', category: 'Necklace', price: 150000, imageId: 'simple-gold-necklace' },
+  { name: 'Floral Gold Necklace', category: 'Necklace', price: 175000, imageId: 'floral-necklace' },
+  { name: 'Laxmi Necklace', category: 'Necklace', price: 220000, imageId: 'laxmi-necklace' },
+  { name: 'Bridal Dora Necklace', category: 'Necklace', price: 280000, imageId: 'bridora-necklace' },
+  { name: 'Round Necklace Design', category: 'Necklace', price: 190000, imageId: 'round-necklace1' },
 ];
 
 export default function GoldPage() {
@@ -19,7 +28,7 @@ export default function GoldPage() {
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
 
   const handleQuickView = (item: any, imageUrl: string) => {
-    setSelectedItem({ ...item, imageUrl });
+    setSelectedItem({ ...item, imageUrl, price: formatPrice(item.price) });
     setIsQuickViewOpen(true);
   };
 
@@ -61,7 +70,7 @@ export default function GoldPage() {
                   <div className="text-center space-y-1">
                     <span className="text-[10px] text-primary uppercase tracking-[0.2em]">{item.category}</span>
                     <h3 className="text-lg md:text-xl font-headline font-bold">{item.name}</h3>
-                    <p className="text-muted-foreground font-light text-sm md:text-base">{item.price}</p>
+                    <p className="text-muted-foreground font-light text-sm md:text-base">{formatPrice(item.price)}</p>
                   </div>
                 </div>
               );

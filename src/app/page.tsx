@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { getMetalRates } from '@/lib/metals';
 import { CollectionsGrid } from '@/components/sections/collections-grid';
+import { formatPrice } from '@/lib/utils';
 
 const categories = [
   { id: 'cat-rings', title: 'Rings', link: '/gold' },
@@ -34,14 +35,6 @@ export default async function Home() {
   // Display Rates (Gold per 10g as requested)
   const gold24k_10g = gold24kPerGram * 10;
   const gold22k_10g = gold22kPerGram * 10;
-
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
-      maximumFractionDigits: 0,
-    }).format(price);
-  };
 
   return (
     <div className="flex min-h-screen flex-col bg-background">

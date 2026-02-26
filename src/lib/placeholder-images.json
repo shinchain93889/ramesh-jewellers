@@ -71,6 +71,78 @@
       "description": "Stylish modern gold pendant",
       "imageUrl": "/stylishpendate.jpg",
       "imageHint": "stylish gold pendant"
+    },
+    {
+      "id": "round-necklace",
+      "description": "Classic round gold necklace",
+      "imageUrl": "/roundnecklace.jpg",
+      "imageHint": "round gold necklace"
+    },
+    {
+      "id": "rani-necklace",
+      "description": "Traditional Rani gold necklace",
+      "imageUrl": "/raninecklace.jpg",
+      "imageHint": "rani gold necklace"
+    },
+    {
+      "id": "gold-necklace2",
+      "description": "Elegant gold necklace design",
+      "imageUrl": "/goldnecklace2.jpg",
+      "imageHint": "gold necklace"
+    },
+    {
+      "id": "simple-gold-necklace",
+      "description": "Simple classic gold necklace",
+      "imageUrl": "/simplegoldnecklace.jpg",
+      "imageHint": "simple gold necklace"
+    },
+    {
+      "id": "floral-necklace",
+      "description": "Floral design gold necklace",
+      "imageUrl": "/floralnecklace.webp",
+      "imageHint": "floral gold necklace"
+    },
+    {
+      "id": "laxmi-necklace",
+      "description": "Traditional Laxmi gold necklace",
+      "imageUrl": "/laxminecklace.jpeg",
+      "imageHint": "laxmi gold necklace"
+    },
+    {
+      "id": "bridora-necklace",
+      "description": "Bridal Dora gold necklace",
+      "imageUrl": "/bridoranecklace.jpg",
+      "imageHint": "bridal gold necklace"
+    },
+    {
+      "id": "round-necklace1",
+      "description": "Round design gold necklace variant",
+      "imageUrl": "/roundnecklace1.jpg",
+      "imageHint": "round gold necklace"
+    },
+    {
+      "id": "silver-choker",
+      "description": "Elegant silver choker",
+      "imageUrl": "/silverchoker.jpg",
+      "imageHint": "silver choker"
+    },
+    {
+      "id": "silver-necklace",
+      "description": "Intricate silver necklace",
+      "imageUrl": "/silvernecklace.jpg",
+      "imageHint": "silver necklace"
+    },
+    {
+      "id": "silver-pendant",
+      "description": "Modern silver pendant",
+      "imageUrl": "/silverpendant.webp",
+      "imageHint": "silver pendant"
+    },
+    {
+      "id": "silver-set",
+      "description": "Complete silver jewelry set",
+      "imageUrl": "/silverset.webp",
+      "imageHint": "silver set"
     }
   ]
 }
