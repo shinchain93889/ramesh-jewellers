@@ -26,11 +26,11 @@ export default async function Home() {
   const fallbackDate = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
   const displayDate = rates?.lastUpdated || fallbackDate;
 
-  // Base rates per gram
-  const gold24kPerGram = rates ? rates.gold.price24K : 15643;
-  const gold22kPerGram = rates ? rates.gold.price22K : 14339;
-  const silver1gPrice = rates ? rates.silver.price1Gram : 260;
-  const silver1kgPrice = rates ? rates.silver.price1Kg : 260000;
+  // Base rates per gram (fallback values include GST + local levies for Indian retail)
+  const gold24kPerGram = rates ? rates.gold.price24K : 16255;
+  const gold22kPerGram = rates ? rates.gold.price22K : 14900;
+  const silver1gPrice = rates ? rates.silver.price1Gram : 96;
+  const silver1kgPrice = rates ? rates.silver.price1Kg : 96000;
 
   // Display Rates (Gold per 10g as requested)
   const gold24k_10g = gold24kPerGram * 10;
