@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { getMetalRates } from '@/lib/metals';
 import { CollectionsGrid } from '@/components/sections/collections-grid';
-import { CategoryGallery } from '@/components/sections/category-gallery';
+import { CategorySection } from '@/components/sections/category-section';
 import { formatPrice } from '@/lib/utils';
 
 const categories = [
@@ -87,8 +87,43 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* Category Gallery Section */}
-        <CategoryGallery />
+
+        {/* Category Sections */}
+        <CategorySection
+          id="rings"
+          title="Rings"
+          banner="/images/rings/gold_ring.png"
+          description="Discover our exquisite collection of gold and diamond rings, crafted to perfection for every occasion."
+          products={PlaceHolderImages.filter(img => img.category === 'rings').slice(0, 8)}
+        />
+        <CategorySection
+          id="bangles"
+          title="Bangles"
+          banner="/goldbangle.jpg"
+          description="Traditional and contemporary bangles in gold, designed to add elegance to your wrists."
+          products={PlaceHolderImages.filter(img => img.category === 'bangles').slice(0, 8)}
+        />
+        <CategorySection
+          id="necklaces"
+          title="Necklaces"
+          banner="/goldnecklace.jpg"
+          description="Intricate gold and diamond necklaces that make a statement for every celebration."
+          products={PlaceHolderImages.filter(img => img.category === 'necklaces').slice(0, 8)}
+        />
+        <CategorySection
+          id="earrings"
+          title="Earrings"
+          banner="https://images.unsplash.com/photo-1617038220319-276d3cfab638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+          description="Ornate earrings in gold and diamonds, perfect for every style and occasion."
+          products={PlaceHolderImages.filter(img => img.category === 'earrings').slice(0, 8)}
+        />
+        <CategorySection
+          id="bracelets"
+          title="Bracelets"
+          banner="/goldbangle.jpg"
+          description="Elegant bracelets to complement your look, crafted with precision and care."
+          products={PlaceHolderImages.filter(img => img.category === 'bracelets' || img.category === 'bangles').slice(0, 8)}
+        />
 
         {/* Featured Teaser Section */}
         <section className="py-16 md:py-24 bg-secondary/30 relative overflow-hidden">

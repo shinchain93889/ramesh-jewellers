@@ -50,6 +50,69 @@
       "category": "earrings"
     },
     {
+      "id": "dombjumke",
+      "description": "Domb Jumke Earrings",
+      "imageUrl": "/images/dombjumke.webp",
+      "imageHint": "domb jumke earrings",
+      "category": "earrings"
+    },
+    {
+      "id": "goldbali",
+      "description": "Gold Bali Earrings",
+      "imageUrl": "/images/goldbali.jpg",
+      "imageHint": "gold bali earrings",
+      "category": "earrings"
+    },
+    {
+      "id": "hoopearring",
+      "description": "Hoop Earrings",
+      "imageUrl": "/images/hoopearring.jpg",
+      "imageHint": "hoop earrings",
+      "category": "earrings"
+    },
+    {
+      "id": "jhale",
+      "description": "Jhale Earrings",
+      "imageUrl": "/images/jhale.webp",
+      "imageHint": "jhale earrings",
+      "category": "earrings"
+    },
+    {
+      "id": "lockearring1",
+      "description": "Lock Earrings",
+      "imageUrl": "/images/lockearring.jpg",
+      "imageHint": "lock earrings",
+      "category": "earrings"
+    },
+    {
+      "id": "lockearring2",
+      "description": "Lock Earrings Variant",
+      "imageUrl": "/images/lockearring.jpg",
+      "imageHint": "lock earrings variant",
+      "category": "earrings"
+    },
+    {
+      "id": "longjhumka",
+      "description": "Long Jhumka Earrings",
+      "imageUrl": "/images/longjhumka.jpg",
+      "imageHint": "long jhumka earrings",
+      "category": "earrings"
+    },
+    {
+      "id": "punjabiearring",
+      "description": "Punjabi Earrings",
+      "imageUrl": "/images/punjabiearring.webp",
+      "imageHint": "punjabi earrings",
+      "category": "earrings"
+    },
+    {
+      "id": "tops",
+      "description": "Tops Earrings",
+      "imageUrl": "/images/tops.jpg",
+      "imageHint": "tops earrings",
+      "category": "earrings"
+    },
+    {
       "id": "cat-bridal",
       "description": "Full bridal jewelry set",
       "imageUrl": "/bridal-image.jpg",
@@ -237,6 +300,17 @@
       "imageUrl": "/images/rings/squarering.jpg",
       "imageHint": "square ring",
       "category": "rings"
-    }
+    },
+    { "id": "bangle1", "description": "Classic Gold Bangle 1", "imageUrl": "/images/bangle1.jpg", "imageHint": "gold bangle", "category": "bangles" },
+    { "id": "bangle2", "description": "Classic Gold Bangle 2", "imageUrl": "/img/bangle2.jpg", "imageHint": "gold bangle", "category": "bangles" },
+    { "id": "bangle3", "description": "Classic Gold Bangle 3", "imageUrl": "/img/bangle3.jpg", "imageHint": "gold bangle", "category": "bangles" },
+      { "id": "bangle2", "description": "Classic Gold Bangle 2", "imageUrl": "/images/bangle2.jpg", "imageHint": "gold bangle", "category": "bangles" },
+      { "id": "bangle3", "description": "Classic Gold Bangle 3", "imageUrl": "/images/bangle3.jpg", "imageHint": "gold bangle", "category": "bangles" },
+      { "id": "bangle4", "description": "Classic Gold Bangle 4", "imageUrl": "/images/bangle4.jpg", "imageHint": "gold bangle", "category": "bangles" },
+      { "id": "bangle8", "description": "Classic Gold Bangle 8", "imageUrl": "/images/bangle8.jpg", "imageHint": "gold bangle", "category": "bangles" },
+      { "id": "beadedbangle", "description": "Beaded Gold Bangle", "imageUrl": "/images/beadedbangle.jpg", "imageHint": "beaded gold bangle", "category": "bangles" },
+      { "id": "flowerbangle", "description": "Floral Gold Bangle", "imageUrl": "/images/flowerbangle.jpg", "imageHint": "floral gold bangle", "category": "bangles" },
+      { "id": "lakshmibangle", "description": "Lakshmi Gold Bangle", "imageUrl": "/images/lakshmibangle.jpg", "imageHint": "lakshmi gold bangle", "category": "bangles" },
+      { "id": "rajasthanbangle", "description": "Rajasthani Gold Bangle", "imageUrl": "/images/rajasthanbangle.jpg", "imageHint": "rajasthani gold bangle", "category": "bangles" }
   ]
 }

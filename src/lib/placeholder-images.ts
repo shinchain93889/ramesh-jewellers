@@ -1,5 +1,6 @@
 // Forces HMR update (invalidated for new ring images)
-import data from './placeholder-images.json';
+
+import placeholderImagesJson from './placeholder-images.json';
 
 export type ImagePlaceholder = {
   id: string;
@@ -9,4 +10,4 @@ export type ImagePlaceholder = {
   category: string;
 };
 
-export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;
+export const PlaceHolderImages: ImagePlaceholder[] = placeholderImagesJson.placeholderImages;

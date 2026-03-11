@@ -1,5 +1,11 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem
+} from '@/components/ui/dropdown-menu';
 import { Menu } from 'lucide-react';
 import {
   Sheet,
@@ -38,16 +44,38 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden space-x-6 lg:flex">
+
+        <div className="hidden space-x-6 lg:flex items-center">
           {navLinks.map((link) => (
-            <Link 
-              key={link.href} 
-              href={link.href} 
+            <Link
+              key={link.href}
+              href={link.href}
               className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
             >
               {link.label}
             </Link>
           ))}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="text-sm font-medium uppercase tracking-widest hover:text-primary">
+                Categories
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem asChild>
+                <Link href="/rings">Rings</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/bangles">Bangles</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/necklaces">Necklaces</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/earrings">Earrings</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         <div className="flex items-center space-x-4">
@@ -69,14 +97,35 @@ export function Navbar() {
                 </SheetHeader>
                 <div className="flex flex-col p-8 space-y-6">
                   {navLinks.map((link) => (
-                    <Link 
-                      key={link.href} 
-                      href={link.href} 
+                    <Link
+                      key={link.href}
+                      href={link.href}
                       className="text-lg font-medium text-foreground hover:text-primary transition-colors uppercase tracking-[0.2em]"
                     >
                       {link.label}
                     </Link>
                   ))}
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" className="text-lg font-medium text-foreground hover:text-primary transition-colors uppercase tracking-[0.2em] w-full text-left justify-start">
+                        Categories
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem asChild>
+                        <Link href="/rings">Rings</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link href="/bangles">Bangles</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link href="/necklaces">Necklaces</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link href="/earrings">Earrings</Link>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-black mt-4 rounded-none h-12 uppercase tracking-widest font-bold">
                     Quick Inquiry
                   </Button>
