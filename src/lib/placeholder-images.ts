@@ -1,4 +1,4 @@
-// Forces HMR update
+// Forces HMR update (invalidated for new ring images)
 import data from './placeholder-images.json';
 
 export type ImagePlaceholder = {
@@ -6,6 +6,7 @@ export type ImagePlaceholder = {
   description: string;
   imageUrl: string;
   imageHint: string;
+  category: string;
 };
 
 export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;

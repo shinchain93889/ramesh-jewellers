@@ -8,15 +8,14 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { getMetalRates } from '@/lib/metals';
 import { CollectionsGrid } from '@/components/sections/collections-grid';
+import { CategoryGallery } from '@/components/sections/category-gallery';
 import { formatPrice } from '@/lib/utils';
 
 const categories = [
   { id: 'cat-rings', title: 'Rings', link: '/gold' },
-  { id: 'cat-necklaces', title: 'Necklaces', link: '/gold' },
   { id: 'cat-bangles', title: 'Bangles', link: '/gold' },
-  { id: 'cat-earrings', title: 'Earrings', link: '/gold' },
-  { id: 'cat-bridal', title: 'Bridal Sets', link: '/bridal' },
-  { id: 'cat-chains', title: 'Chains', link: '/gold' },
+  { id: 'cat-necklaces', title: 'Necklaces', link: '/gold' },
+  { id: 'cat-anklets', title: 'Anklets', link: '/gold' },
 ];
 
 export default async function Home() {
@@ -35,6 +34,8 @@ export default async function Home() {
   // Display Rates (Gold per 10g as requested)
   const gold24k_10g = gold24kPerGram * 10;
   const gold22k_10g = gold22kPerGram * 10;
+
+  const bridalImage = PlaceHolderImages.find((img) => img.id === 'cat-bridal');
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -86,21 +87,27 @@ export default async function Home() {
           </div>
         </section>
 
+        {/* Category Gallery Section */}
+        <CategoryGallery />
 
         {/* Featured Teaser Section */}
         <section className="py-16 md:py-24 bg-secondary/30 relative overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-              <div className="w-full lg:w-1/2 relative h-[400px] md:h-[600px]">
-                <div className="absolute inset-0 border border-primary/30 translate-x-4 translate-y-4 hidden md:block"></div>
-                {PlaceHolderImages.find(img => img.id === 'cat-bridal') && (
-                  <Image
-                    src={PlaceHolderImages.find(img => img.id === 'cat-bridal')!.imageUrl}
-                    alt="Bridal Masterpiece"
-                    fill
-                    className="object-cover"
-                    data-ai-hint="bridal jewelry"
-                  />
+              <div className="w-full lg:w-1/2 relative min-h-[400px] md:h-[600px] flex items-center justify-center">
+                <div className="absolute inset-0 border border-primary/30 translate-x-4 translate-y-4 hidden md:block z-0"></div>
+                {bridalImage && (
+                  <div className="relative w-full h-[380px] md:h-[580px] z-10 bg-background overflow-hidden mr-0 md:mr-8 md:mb-8">
+                    <Image
+                      src={bridalImage.imageUrl}
+                      alt="Bridal Masterpiece"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority
+                      data-ai-hint="bridal jewelry"
+                    />
+                  </div>
                 )}
               </div>
               <div className="w-full lg:w-1/2 space-y-6 md:space-y-8 text-center lg:text-left">

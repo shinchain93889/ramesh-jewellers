@@ -2,84 +2,57 @@
 export const getMetalRates = async () => {
     const API_KEY = process.env.METALS_API_KEY;
 
-    if (!API_KEY) {
-        console.error("METALS_API_KEY (GoldAPI key) is not defined");
+    if (!API_KEY || API_KEY === 'your_gold_api_key_here') {
+        console.error("METALS_API_KEY (GoldAPI key) is not defined or is set to the placeholder.");
         return null;
     }
 
     // Helper to fetch data with 24-hour caching
-    const fetchMetalPrice = async (symbol: string) => {
+    const fetchMetalPrices = async () => {
         try {
-            const res = await fetch(`https://www.goldapi.io/api/${symbol}/INR`, {
+            const res = await fetch(`https://api.metalpriceapi.com/v1/latest?api_key=${API_KEY}&base=INR&currencies=XAU,XAG`, {
                 method: 'GET',
-                headers: {
-                    'x-access-token': API_KEY,
-                    'Content-Type': 'application/json'
-                },
                 next: { revalidate: 86400 } // Cache for 24 hours (86400 seconds)
             });
 
             if (!res.ok) {
                 const errorText = await res.text();
-                console.error(`Failed to fetch ${symbol}: ${res.status} ${res.statusText}`, errorText);
+                console.error(`Failed to fetch metal prices: ${res.status} ${res.statusText}`, errorText);
                 return null;
             }
 
             return res.json();
         } catch (error) {
-            console.error(`Error fetching ${symbol}:`, error);
+            console.error(`Error fetching metal prices:`, error);
             return null;
         }
     };
 
     try {
-        // Fetch Gold (XAU) and Silver (XAG) in parallel
-        const [goldData, silverData] = await Promise.all([
-            fetchMetalPrice('XAU'),
-            fetchMetalPrice('XAG')
-        ]);
+        const data = await fetchMetalPrices();
 
-        if (!goldData || !silverData) {
-            console.error("Failed to retrieve one or more metal rates");
+        if (!data || !data.success || !data.rates || !data.rates.XAU || !data.rates.XAG) {
+            console.error("Failed to retrieve valid metal rates from MetalPriceAPI");
             return null;
         }
 
-        // GoldAPI returns the international spot price converted to INR.
+        // MetalPriceAPI returns rate of 1 INR to XAU/XAG. So 1 / rate = INR per 1 Troy Ounce.
+        const goldPricePerOunce = 1 / data.rates.XAU;
+        const silverPricePerOunce = 1 / data.rates.XAG;
+
         // Indian retail prices include additional charges on top of the spot price:
         //   - 3% GST (mandatory)
         //   - ~4% local levies, hallmarking & dealer premium
         // Total adjustment: ~7% above spot price to match Indian market retail rates.
-        // (Cross-verified: API spot ₹15,174/g × 1.07 ≈ ₹16,236/g → ₹1,62,360 per 10g
-        //  vs actual Lucknow retail ₹1,62,550 per 10g 24K)
         const INDIA_RETAIL_FACTOR = 1.07;
 
         // 1 Troy Ounce = 31.1034768 Grams
         const TROY_OUNCE_IN_GRAMS = 31.1034768;
 
-        let goldPricePerGram24K = 0;
-        let goldPricePerGram22K = 0;
-        let silverPricePerGram = 0;
-
-        // Process Gold Data
-        if (goldData.price_gram_24k) {
-            goldPricePerGram24K = goldData.price_gram_24k * INDIA_RETAIL_FACTOR;
-            goldPricePerGram22K = goldData.price_gram_22k
-                ? goldData.price_gram_22k * INDIA_RETAIL_FACTOR
-                : goldPricePerGram24K * (22 / 24);
-        } else {
-            // Fallback calculation
-            const pricePerOunce = goldData.price;
-            goldPricePerGram24K = (pricePerOunce / TROY_OUNCE_IN_GRAMS) * INDIA_RETAIL_FACTOR;
-            goldPricePerGram22K = goldPricePerGram24K * (22 / 24);
-        }
-
-        // Process Silver Data
-        if (silverData.price_gram_24k) {
-            silverPricePerGram = silverData.price_gram_24k * INDIA_RETAIL_FACTOR;
-        } else {
-            const pricePerOunce = silverData.price;
-            silverPricePerGram = (pricePerOunce / TROY_OUNCE_IN_GRAMS) * INDIA_RETAIL_FACTOR;
-        }
+        // Calculate per gram prices
+        const goldPricePerGram24K = (goldPricePerOunce / TROY_OUNCE_IN_GRAMS) * INDIA_RETAIL_FACTOR;
+        const goldPricePerGram22K = goldPricePerGram24K * (22 / 24);
+        const silverPricePerGram = (silverPricePerOunce / TROY_OUNCE_IN_GRAMS) * INDIA_RETAIL_FACTOR;
 
         // Ensure we have valid numbers
         if (!goldPricePerGram24K || !silverPricePerGram) {

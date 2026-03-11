@@ -21,8 +21,16 @@ const goldItems = [
   { name: 'Laxmi Necklace', category: 'Necklace', price: 220000, imageId: 'laxmi-necklace' },
   { name: 'Bridal Dora Necklace', category: 'Necklace', price: 280000, imageId: 'bridora-necklace' },
   { name: 'Round Necklace Design', category: 'Necklace', price: 190000, imageId: 'round-necklace1' },
+  { name: 'Circle Ring', category: 'Ring', price: 45000, imageId: 'circle-ring' },
+  { name: 'Crown Ring', category: 'Ring', price: 55000, imageId: 'crown-ring' },
+  { name: 'Flower Ring', category: 'Ring', price: 42000, imageId: 'flower-ring' },
+  { name: 'Four Petal Ring', category: 'Ring', price: 48000, imageId: 'fourpetal-ring' },
+  { name: 'Gold Pearl Ring', category: 'Ring', price: 62000, imageId: 'goldpearl-ring' },
+  { name: 'Classic Gold Ring', category: 'Ring', price: 35000, imageId: 'gold-ring-2' },
+  { name: 'Leaf Ring', category: 'Ring', price: 38000, imageId: 'leaf-ring' },
+  { name: 'Modern Ring', category: 'Ring', price: 50000, imageId: 'modern-ring' },
+  { name: 'Square Ring', category: 'Ring', price: 47000, imageId: 'square-ring' },
 ];
-
 export default function GoldPage() {
   const [selectedItem, setSelectedItem] = useState<any>(null);
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);

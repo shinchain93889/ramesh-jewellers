@@ -4,145 +4,239 @@
       "id": "hero-ring",
       "description": "Exquisite gold diamond ring",
       "imageUrl": "https://images.unsplash.com/photo-1600143674013-a690b5d25104?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "diamond ring"
+      "imageHint": "diamond ring",
+      "category": "rings"
     },
     {
       "id": "hero-necklace",
       "description": "Elegant gold necklace collection",
       "imageUrl": "https://images.unsplash.com/photo-1601121141499-17ae80afc03a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "gold necklace"
+      "imageHint": "gold necklace",
+      "category": "necklaces"
     },
     {
       "id": "hero-earrings",
       "description": "Luxury diamond earrings",
       "imageUrl": "https://images.unsplash.com/photo-1724937798223-720f8956cb12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "diamond earrings"
+      "imageHint": "diamond earrings",
+      "category": "earrings"
     },
     {
       "id": "cat-rings",
       "description": "Gold rings collection",
-      "imageUrl": "https://images.unsplash.com/photo-1598560917505-59a3ad559071?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-      "imageHint": "gold rings"
+      "imageUrl": "/images/rings/gold_ring.png",
+      "imageHint": "gold rings",
+      "category": "rings"
     },
     {
       "id": "cat-necklaces",
       "description": "Intricate gold necklaces",
       "imageUrl": "/goldnecklace.jpg",
-      "imageHint": "gold necklace"
+      "imageHint": "gold necklace",
+      "category": "necklaces"
     },
     {
       "id": "cat-bangles",
       "description": "Traditional gold bangles",
       "imageUrl": "/goldbangle.jpg",
-      "imageHint": "gold bangles"
+      "imageHint": "gold bangles",
+      "category": "bangles"
     },
     {
       "id": "cat-earrings",
       "description": "Ornate gold earrings",
       "imageUrl": "https://images.unsplash.com/photo-1617038220319-276d3cfab638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-      "imageHint": "gold earrings"
+      "imageHint": "gold earrings",
+      "category": "earrings"
     },
     {
       "id": "cat-bridal",
       "description": "Full bridal jewelry set",
-      "imageUrl": "https://images.unsplash.com/photo-1606038166690-581c8bcc0897?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-      "imageHint": "bridal jewelry"
+      "imageUrl": "/bridal-image.jpg",
+      "imageHint": "bridal jewelry",
+      "category": "bridal"
     },
     {
       "id": "cat-chains",
       "description": "Elegant gold chains",
       "imageUrl": "https://images.unsplash.com/photo-1620912189865-1e8a33da4c5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-      "imageHint": "gold chain"
+      "imageHint": "gold chain",
+      "category": "chains"
     },
     {
       "id": "silver-section",
       "description": "Fine silver jewelry collection",
       "imageUrl": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "silver jewelry"
+      "imageHint": "silver jewelry",
+      "category": "necklaces"
     },
     {
       "id": "gold-pendant",
       "description": "Elegant gold pendant",
       "imageUrl": "/goldpendate.jpg",
-      "imageHint": "gold pendant"
+      "imageHint": "gold pendant",
+      "category": "pendants"
     },
     {
       "id": "gold-stylish-pendant",
       "description": "Stylish modern gold pendant",
       "imageUrl": "/stylishpendate.jpg",
-      "imageHint": "stylish gold pendant"
+      "imageHint": "stylish gold pendant",
+      "category": "pendants"
     },
     {
       "id": "round-necklace",
       "description": "Classic round gold necklace",
       "imageUrl": "/roundnecklace.jpg",
-      "imageHint": "round gold necklace"
+      "imageHint": "round gold necklace",
+      "category": "necklaces"
     },
     {
       "id": "rani-necklace",
       "description": "Traditional Rani gold necklace",
       "imageUrl": "/raninecklace.jpg",
-      "imageHint": "rani gold necklace"
+      "imageHint": "rani gold necklace",
+      "category": "necklaces"
     },
     {
       "id": "gold-necklace2",
       "description": "Elegant gold necklace design",
       "imageUrl": "/goldnecklace2.jpg",
-      "imageHint": "gold necklace"
+      "imageHint": "gold necklace",
+      "category": "necklaces"
     },
     {
       "id": "simple-gold-necklace",
       "description": "Simple classic gold necklace",
       "imageUrl": "/simplegoldnecklace.jpg",
-      "imageHint": "simple gold necklace"
+      "imageHint": "simple gold necklace",
+      "category": "necklaces"
     },
     {
       "id": "floral-necklace",
       "description": "Floral design gold necklace",
       "imageUrl": "/floralnecklace.webp",
-      "imageHint": "floral gold necklace"
+      "imageHint": "floral gold necklace",
+      "category": "necklaces"
     },
     {
       "id": "laxmi-necklace",
       "description": "Traditional Laxmi gold necklace",
       "imageUrl": "/laxminecklace.jpeg",
-      "imageHint": "laxmi gold necklace"
+      "imageHint": "laxmi gold necklace",
+      "category": "necklaces"
     },
     {
       "id": "bridora-necklace",
       "description": "Bridal Dora gold necklace",
       "imageUrl": "/bridoranecklace.jpg",
-      "imageHint": "bridal gold necklace"
+      "imageHint": "bridal gold necklace",
+      "category": "necklaces"
     },
     {
       "id": "round-necklace1",
       "description": "Round design gold necklace variant",
       "imageUrl": "/roundnecklace1.jpg",
-      "imageHint": "round gold necklace"
+      "imageHint": "round gold necklace",
+      "category": "necklaces"
     },
     {
       "id": "silver-choker",
       "description": "Elegant silver choker",
       "imageUrl": "/silverchoker.jpg",
-      "imageHint": "silver choker"
+      "imageHint": "silver choker",
+      "category": "necklaces"
     },
     {
       "id": "silver-necklace",
       "description": "Intricate silver necklace",
       "imageUrl": "/silvernecklace.jpg",
-      "imageHint": "silver necklace"
+      "imageHint": "silver necklace",
+      "category": "necklaces"
     },
     {
       "id": "silver-pendant",
       "description": "Modern silver pendant",
       "imageUrl": "/silverpendant.webp",
-      "imageHint": "silver pendant"
+      "imageHint": "silver pendant",
+      "category": "pendants"
     },
     {
       "id": "silver-set",
       "description": "Complete silver jewelry set",
       "imageUrl": "/silverset.webp",
-      "imageHint": "silver set"
+      "imageHint": "silver set",
+      "category": "necklaces"
+    },
+    {
+      "id": "cat-anklets",
+      "description": "Beautiful gold anklets",
+      "imageUrl": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageHint": "gold anklet",
+      "category": "anklets"
+    },
+    {
+      "id": "circle-ring",
+      "description": "Exquisite circle ring",
+      "imageUrl": "/images/rings/circlering.jpg",
+      "imageHint": "circle ring",
+      "category": "rings"
+    },
+    {
+      "id": "crown-ring",
+      "description": "Elegant crown ring",
+      "imageUrl": "/images/rings/crownring.jpg",
+      "imageHint": "crown ring",
+      "category": "rings"
+    },
+    {
+      "id": "flower-ring",
+      "description": "Beautiful flower ring",
+      "imageUrl": "/images/rings/flowerring.webp",
+      "imageHint": "flower ring",
+      "category": "rings"
+    },
+    {
+      "id": "fourpetal-ring",
+      "description": "Four petal ring design",
+      "imageUrl": "/images/rings/fourpetalring.webp",
+      "imageHint": "four petal ring",
+      "category": "rings"
+    },
+    {
+      "id": "goldpearl-ring",
+      "description": "Gold pearl ring",
+      "imageUrl": "/images/rings/goldpearlring.jpg",
+      "imageHint": "gold pearl ring",
+      "category": "rings"
+    },
+    {
+      "id": "gold-ring-2",
+      "description": "Classic gold ring",
+      "imageUrl": "/images/rings/goldring.jpg",
+      "imageHint": "gold ring",
+      "category": "rings"
+    },
+    {
+      "id": "leaf-ring",
+      "description": "Nature inspired leaf ring",
+      "imageUrl": "/images/rings/leafring.webp",
+      "imageHint": "leaf ring",
+      "category": "rings"
+    },
+    {
+      "id": "modern-ring",
+      "description": "Modern gold ring",
+      "imageUrl": "/images/rings/modernring.jpg",
+      "imageHint": "modern ring",
+      "category": "rings"
+    },
+    {
+      "id": "square-ring",
+      "description": "Square design ring",
+      "imageUrl": "/images/rings/squarering.jpg",
+      "imageHint": "square ring",
+      "category": "rings"
     }
   ]
 }

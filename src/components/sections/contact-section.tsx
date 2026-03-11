@@ -52,8 +52,7 @@ export function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-12">
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-headline font-bold text-secondary">Visit Our Atelier</h2>
-              <div className="w-24 h-1 bg-primary"></div>
+              <h2 className="text-4xl md:text-5xl font-headline font-bold text-secondary"><span className="gold-gradient underline decoration-primary underline-offset-[12px]">Visit Our Showroom</span></h2>
               <p className="text-muted-foreground max-w-md text-lg leading-relaxed">
                 Experience luxury in person. Our experts are ready to assist you in finding your next heirloom.
               </p>
