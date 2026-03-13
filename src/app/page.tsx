@@ -11,10 +11,12 @@ import { CollectionsGrid } from '@/components/sections/collections-grid';
 import { CategorySection } from '@/components/sections/category-section';
 import { formatPrice } from '@/lib/utils';
 
+
+// Use IDs that match placeholder-images.json for stable hydration
 const categories = [
-  { id: 'cat-rings', title: 'Rings', link: '/gold' },
-  { id: 'cat-bangles', title: 'Bangles', link: '/gold' },
-  { id: 'cat-necklaces', title: 'Necklaces', link: '/gold' },
+  { id: 'circle-ring', title: 'Rings', link: '/gold' },
+  { id: 'bangle1', title: 'Bangles', link: '/gold' },
+  { id: 'necklace1', title: 'Necklaces', link: '/gold' },
   { id: 'cat-anklets', title: 'Anklets', link: '/gold' },
 ];
 
@@ -37,11 +39,32 @@ export default async function Home() {
 
   const bridalImage = PlaceHolderImages.find((img) => img.id === 'cat-bridal');
 
+  const heroItems = [
+    {
+      title: "Eternal Bridal Collection",
+      subtitle: "Make your special day unforgettable with our handcrafted pieces.",
+      image: PlaceHolderImages.find(img => img.id === 'cat-bridal'),
+      cta: "Explore Collection"
+    },
+    {
+      title: "The Gold Standard",
+      subtitle: "Discover timeless 22K gold necklaces and bangles.",
+      image: PlaceHolderImages.find(img => img.id === 'hero-necklace'),
+      cta: "View Designs"
+    },
+    {
+      title: "Diamond Radiance",
+      subtitle: "Exquisite diamonds that capture the light and your heart.",
+      image: PlaceHolderImages.find(img => img.id === 'hero-earrings'),
+      cta: "Shop Diamonds"
+    }
+  ];
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Navbar />
       <main className="flex-1">
-        <HeroCarousel />
+        <HeroCarousel items={heroItems} />
 
         {/* Daily Rates Section */}
         <section className="py-12 bg-secondary/20 border-b border-primary/10">

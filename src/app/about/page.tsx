@@ -47,6 +47,24 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+        {/* Gallery Section */}
+        <section className="py-12 container mx-auto px-4">
+          <h2 className="text-3xl font-headline font-bold text-center mb-8 text-primary">Our Journey in Pictures</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {["/images/ab2.jpg","/images/ab3.jpg","/images/ab5.jpg","/images/ab6.jpg","/images/ab8.jpg","/images/ab9.jpg","/images/ab10.jpg","/images/ab14.jpg","/images/ab15.jpg"].map((src, idx) => (
+              <div key={src} className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                <Image
+                  src={src}
+                  alt={`About gallery image ${idx + 1}`}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority={idx < 3}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
         </section>
       </main>
       <Footer />

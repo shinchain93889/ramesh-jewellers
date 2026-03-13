@@ -1,68 +1,20 @@
 {
   "placeholderImages": [
-    {
-      "id": "hero-ring",
-      "description": "Exquisite gold diamond ring",
-      "imageUrl": "https://images.unsplash.com/photo-1600143674013-a690b5d25104?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "diamond ring",
-      "category": "rings"
-    },
-    {
-      "id": "hero-necklace",
-      "description": "Elegant gold necklace collection",
-      "imageUrl": "https://images.unsplash.com/photo-1601121141499-17ae80afc03a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "gold necklace",
-      "category": "necklaces"
-    },
-    {
-      "id": "hero-earrings",
-      "description": "Luxury diamond earrings",
-      "imageUrl": "https://images.unsplash.com/photo-1724937798223-720f8956cb12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "imageHint": "diamond earrings",
-      "category": "earrings"
-    },
-    {
-      "id": "cat-rings",
-      "description": "Gold rings collection",
-      "imageUrl": "/images/rings/gold_ring.png",
-      "imageHint": "gold rings",
-      "category": "rings"
-    },
-    {
-      "id": "cat-necklaces",
-      "description": "Intricate gold necklaces",
-      "imageUrl": "/goldnecklace.jpg",
-      "imageHint": "gold necklace",
-      "category": "necklaces"
-    },
-    {
-      "id": "cat-bangles",
-      "description": "Traditional gold bangles",
-      "imageUrl": "/goldbangle.jpg",
-      "imageHint": "gold bangles",
-      "category": "bangles"
-    },
-    {
-      "id": "cat-earrings",
-      "description": "Ornate gold earrings",
-      "imageUrl": "https://images.unsplash.com/photo-1617038220319-276d3cfab638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-      "imageHint": "gold earrings",
-      "category": "earrings"
-    },
-    {
-      "id": "dombjumke",
-      "description": "Domb Jumke Earrings",
-      "imageUrl": "/images/dombjumke.webp",
-      "imageHint": "domb jumke earrings",
-      "category": "earrings"
-    },
-    {
-      "id": "goldbali",
-      "description": "Gold Bali Earrings",
-      "imageUrl": "/images/goldbali.jpg",
-      "imageHint": "gold bali earrings",
-      "category": "earrings"
-    },
+      { "id": "payal1", "description": "Payal 1", "imageUrl": "/images/payal1.jpg", "imageHint": "anklet", "category": "anklets" },
+      { "id": "payal2", "description": "Payal 2", "imageUrl": "/images/payal2.avif", "imageHint": "anklet", "category": "anklets" },
+      { "id": "payal3", "description": "Payal 3", "imageUrl": "/images/payal3.jpg", "imageHint": "anklet", "category": "anklets" },
+      { "id": "payal4", "description": "Payal 4", "imageUrl": "/images/payal4.jpg", "imageHint": "anklet", "category": "anklets" },
+      { "id": "payal5", "description": "Payal 5", "imageUrl": "/images/payal5.jpg", "imageHint": "anklet", "category": "anklets" },
+      { "id": "payal6", "description": "Payal 6", "imageUrl": "/images/payal6.jpg", "imageHint": "anklet", "category": "anklets" },
+      { "id": "payal8", "description": "Payal 8", "imageUrl": "/images/payal8.jpg", "imageHint": "anklet", "category": "anklets" },
+      { "id": "payal9", "description": "Payal 9", "imageUrl": "/images/payal9.jpg", "imageHint": "anklet", "category": "anklets" },
+      { "id": "payal10", "description": "Payal 10", "imageUrl": "/images/payal10.jpg", "imageHint": "anklet", "category": "anklets" },
+      { "id": "payal11", "description": "Payal 11", "imageUrl": "/images/payal11.jpg", "imageHint": "anklet", "category": "anklets" },
+      { "id": "payal12", "description": "Payal 12", "imageUrl": "/images/payal12.jpg", "imageHint": "anklet", "category": "anklets" },
+    { "id": "jhumki2", "description": "Jhumki Earrings 2", "imageUrl": "/images/jhumki2.jpg", "imageHint": "jhumki earrings", "category": "earrings" },
+    { "id": "realjhumke", "description": "Real Jhumke Earrings", "imageUrl": "/images/realjhumke.jpg", "imageHint": "real jhumke earrings", "category": "earrings" },
+      { "id": "chain", "description": "Gold Chain", "imageUrl": "/chain.jpg", "imageHint": "gold chain", "category": "necklaces" },
+      { "id": "necklace1", "description": "Gold Necklace 1", "imageUrl": "/necklace1.jpg", "imageHint": "gold necklace", "category": "necklaces" },
     {
       "id": "hoopearring",
       "description": "Hoop Earrings",
@@ -312,5 +264,18 @@
       { "id": "flowerbangle", "description": "Floral Gold Bangle", "imageUrl": "/images/flowerbangle.jpg", "imageHint": "floral gold bangle", "category": "bangles" },
       { "id": "lakshmibangle", "description": "Lakshmi Gold Bangle", "imageUrl": "/images/lakshmibangle.jpg", "imageHint": "lakshmi gold bangle", "category": "bangles" },
       { "id": "rajasthanbangle", "description": "Rajasthani Gold Bangle", "imageUrl": "/images/rajasthanbangle.jpg", "imageHint": "rajasthani gold bangle", "category": "bangles" }
+    ,
+    { "id": "ab8", "description": "Jewellery Image ab8", "imageUrl": "/images/ab8.jpg", "imageHint": "earring or ring", "category": "earrings" },
+    { "id": "ab9", "description": "Jewellery Image ab9", "imageUrl": "/images/ab9.jpg", "imageHint": "earring or ring", "category": "earrings" },
+    { "id": "ab10", "description": "Jewellery Image ab10", "imageUrl": "/images/ab10.jpg", "imageHint": "ring", "category": "rings" },
+    { "id": "ab14", "description": "Jewellery Image ab14", "imageUrl": "/images/ab14.jpg", "imageHint": "ring", "category": "rings" },
+    { "id": "ab15", "description": "Jewellery Image ab15", "imageUrl": "/images/ab15.jpg", "imageHint": "ring", "category": "rings" },
+    { "id": "br1", "description": "Ring Image br1", "imageUrl": "/images/br1.jpg", "imageHint": "ring", "category": "rings" },
+    { "id": "br2", "description": "Ring Image br2", "imageUrl": "/images/br2.jpg", "imageHint": "ring", "category": "rings" },
+    { "id": "br3", "description": "Ring Image br3", "imageUrl": "/images/br3.jpg", "imageHint": "ring", "category": "rings" },
+    { "id": "br4", "description": "Ring Image br4", "imageUrl": "/images/br4.jpg", "imageHint": "ring", "category": "rings" },
+    { "id": "diaring", "description": "Diamond Ring", "imageUrl": "/images/diaring.jpg", "imageHint": "diamond ring", "category": "rings" },
+    { "id": "mangalsutra", "description": "Traditional Mangalsutra", "imageUrl": "/images/mangalsutra.jpg", "imageHint": "mangalsutra necklace", "category": "necklaces" },
+    { "id": "mangalsutra1", "description": "Modern Mangalsutra", "imageUrl": "/images/mangalsutra1.jpg", "imageHint": "mangalsutra necklace", "category": "necklaces" }
   ]
 }
