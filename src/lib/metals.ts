@@ -1,5 +1,13 @@
+import { unstable_cache } from 'next/cache';
 
-export const getMetalRates = async () => {
+/** Cache tag for revalidating metal rates from cron (6am, 1pm, 8pm IST). */
+export const METAL_RATES_TAG = 'metal-rates';
+
+async function fetchMetalRatesUncached(): Promise<{
+    gold: { price24K: number; price22K: number };
+    silver: { price1Gram: number; price1Kg: number };
+    lastUpdated: string;
+} | null> {
     const API_KEY = process.env.METALS_API_KEY;
 
     if (!API_KEY || API_KEY === 'your_gold_api_key_here') {
@@ -7,29 +15,19 @@ export const getMetalRates = async () => {
         return null;
     }
 
-    // Helper to fetch data with 24-hour caching
-    const fetchMetalPrices = async () => {
-        try {
-            const res = await fetch(`https://api.metalpriceapi.com/v1/latest?api_key=${API_KEY}&base=INR&currencies=XAU,XAG`, {
-                method: 'GET',
-                next: { revalidate: 86400 } // Cache for 24 hours (86400 seconds)
-            });
+    try {
+        const res = await fetch(
+            `https://api.metalpriceapi.com/v1/latest?api_key=${API_KEY}&base=INR&currencies=XAU,XAG`,
+            { method: 'GET', cache: 'no-store' }
+        );
 
-            if (!res.ok) {
-                const errorText = await res.text();
-                console.error(`Failed to fetch metal prices: ${res.status} ${res.statusText}`, errorText);
-                return null;
-            }
-
-            return res.json();
-        } catch (error) {
-            console.error(`Error fetching metal prices:`, error);
+        if (!res.ok) {
+            const errorText = await res.text();
+            console.error(`Failed to fetch metal prices: ${res.status} ${res.statusText}`, errorText);
             return null;
         }
-    };
 
-    try {
-        const data = await fetchMetalPrices();
+        const data = await res.json();
 
         if (!data || !data.success || !data.rates || !data.rates.XAU || !data.rates.XAG) {
             console.error("Failed to retrieve valid metal rates from MetalPriceAPI");
@@ -72,7 +70,19 @@ export const getMetalRates = async () => {
         };
 
     } catch (error) {
-        console.error("Error in getMetalRates:", error);
+        console.error("Error fetching metal rates:", error);
         return null;
     }
+}
+
+/**
+ * Returns cached gold/silver rates. Cache is revalidated by cron at 6:00, 13:00, and 20:00 IST.
+ * Max age 24h between cron runs.
+ */
+export const getMetalRates = async () => {
+    return unstable_cache(
+        fetchMetalRatesUncached,
+        ['metal-rates'],
+        { revalidate: 86400, tags: [METAL_RATES_TAG] }
+    )();
 };
