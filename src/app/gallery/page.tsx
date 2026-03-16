@@ -11,6 +11,11 @@ export default function GalleryPage() {
   const [selectedItem, setSelectedItem] = useState<any>(null);
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
 
+  const excludedAboutImageIds = ['ab8', 'ab9', 'ab10', 'ab14', 'ab15'];
+  const galleryImages = PlaceHolderImages.filter(
+    (img) => !excludedAboutImageIds.includes(img.id)
+  );
+
   const handleQuickView = (img: any) => {
     setSelectedItem({
       name: img.description,
@@ -33,7 +38,7 @@ export default function GalleryPage() {
 
         <section className="py-24 container mx-auto px-4">
           <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-            {PlaceHolderImages.concat(PlaceHolderImages).map((img, idx) => (
+            {galleryImages.map((img, idx) => (
               <div
                 key={idx}
                 className="relative break-inside-avoid border border-primary/10 group cursor-pointer overflow-hidden"
