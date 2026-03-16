@@ -67,7 +67,7 @@
     {
       "id": "cat-bridal",
       "description": "Full bridal jewelry set",
-      "imageUrl": "/bridal-image.jpg",
+      "imageUrl": "/images/bridali1.jpg",
       "imageHint": "bridal jewelry",
       "category": "bridal"
     },
@@ -254,8 +254,8 @@
       "category": "rings"
     },
     { "id": "bangle1", "description": "Classic Gold Bangle 1", "imageUrl": "/images/bangle1.jpg", "imageHint": "gold bangle", "category": "bangles" },
-    { "id": "bangle2", "description": "Classic Gold Bangle 2", "imageUrl": "/img/bangle2.jpg", "imageHint": "gold bangle", "category": "bangles" },
-    { "id": "bangle3", "description": "Classic Gold Bangle 3", "imageUrl": "/img/bangle3.jpg", "imageHint": "gold bangle", "category": "bangles" },
+    { "id": "bangle2", "description": "Classic Gold Bangle 2", "imageUrl": "/images/bangle2.jpg", "imageHint": "gold bangle", "category": "bangles" },
+    { "id": "bangle3", "description": "Classic Gold Bangle 3", "imageUrl": "/images/bangle3.jpg", "imageHint": "gold bangle", "category": "bangles" },
       { "id": "bangle2", "description": "Classic Gold Bangle 2", "imageUrl": "/images/bangle2.jpg", "imageHint": "gold bangle", "category": "bangles" },
       { "id": "bangle3", "description": "Classic Gold Bangle 3", "imageUrl": "/images/bangle3.jpg", "imageHint": "gold bangle", "category": "bangles" },
       { "id": "bangle4", "description": "Classic Gold Bangle 4", "imageUrl": "/images/bangle4.jpg", "imageHint": "gold bangle", "category": "bangles" },

@@ -6,6 +6,10 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { QuickView } from '@/components/quick-view';
 
+type CategoryGalleryProps = {
+  initialCategory?: string;
+};
+
 const CATEGORIES = [
   { id: 'all', label: 'All' },
   { id: 'rings', label: 'Rings' },
@@ -14,14 +18,19 @@ const CATEGORIES = [
   { id: 'necklaces', label: 'Necklaces' },
 ];
 
-export function CategoryGallery() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+export function CategoryGallery({ initialCategory = 'all' }: CategoryGalleryProps) {
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [selectedItem, setSelectedItem] = useState<any>(null);
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
+  const excludedAboutImageIds = ['ab8', 'ab9', 'ab10', 'ab14', 'ab15'];
+
+  const baseImages = PlaceHolderImages.filter(
+    (img) => !excludedAboutImageIds.includes(img.id)
+  );
 
   const filteredImages = selectedCategory === 'all'
-    ? PlaceHolderImages
-    : PlaceHolderImages.filter(img =>
+    ? baseImages
+    : baseImages.filter(img =>
         img.category &&
         img.category.trim().toLowerCase() === selectedCategory.trim().toLowerCase()
       );
