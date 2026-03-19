@@ -9,8 +9,6 @@ import { formatPrice } from '@/lib/utils';
 import { QuickView } from '@/components/quick-view';
 
 const goldItems = [
-  { name: 'Gold Bangle', category: 'Bangle', price: 120000, imageId: 'cat-bangles' },
-  { name: 'Gold Necklace', category: 'Necklace', price: 245000, imageId: 'cat-necklaces' },
   { name: 'Gold Pendant', category: 'Pendant', price: 45000, imageId: 'gold-pendant' },
   { name: 'Gold Stylish Pendant', category: 'Pendant', price: 55000, imageId: 'gold-stylish-pendant' },
   { name: 'Round Necklace', category: 'Necklace', price: 185000, imageId: 'round-necklace' },

@@ -8,6 +8,14 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { QuickView } from '@/components/quick-view';
 
+const bridalSetImages = [
+  { imageUrl: '/images/wedset1.jpg' },
+  { imageUrl: '/images/wedset2.webp' },
+  { imageUrl: '/images/wedset3.webp' },
+  { imageUrl: '/images/wedset4.webp' },
+  { imageUrl: '/images/wedset5.webp' },
+];
+
 export default function BridalPage() {
   const [selectedItem, setSelectedItem] = useState<any>(null);
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
@@ -55,10 +63,8 @@ export default function BridalPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {[1, 2, 3, 4].map((i) => {
-                const img = PlaceHolderImages[i % PlaceHolderImages.length];
-                return (
-                  <div key={i} className="group border border-primary/10 overflow-hidden relative h-[500px]">
+              {bridalSetImages.map((img, index) => (
+                  <div key={index} className="group border border-primary/10 overflow-hidden relative h-[500px]">
                     <Image
                       src={img.imageUrl}
                       alt="Bridal Masterpiece"
@@ -84,8 +90,7 @@ export default function BridalPage() {
                       </div>
                     </div>
                   </div>
-                );
-              })}
+              ))}
             </div>
           </div>
         </section>

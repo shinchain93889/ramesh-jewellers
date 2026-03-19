@@ -186,7 +186,7 @@
     {
       "id": "cat-anklets",
       "description": "Beautiful gold anklets",
-      "imageUrl": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+      "imageUrl": "/images/payal1.jpg",
       "imageHint": "gold anklet",
       "category": "anklets"
     },

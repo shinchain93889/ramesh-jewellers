@@ -47,21 +47,25 @@ export function ContactSection() {
   }
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-16 sm:py-20 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div className="space-y-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 lg:gap-16 items-start">
+          <div className="space-y-10 md:space-y-12">
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-headline font-bold text-secondary"><span className="gold-gradient underline decoration-primary underline-offset-[12px]">Visit Our Showroom</span></h2>
-              <p className="text-muted-foreground max-w-md text-lg leading-relaxed">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-headline font-bold text-foreground text-center lg:text-left">
+                <span className="gold-gradient underline decoration-primary underline-offset-[12px]">
+                  Visit Our Showroom
+                </span>
+              </h2>
+              <p className="text-muted-foreground max-w-md text-base sm:text-lg leading-relaxed text-center lg:text-left mx-auto lg:mx-0">
                 Experience luxury in person. Our experts are ready to assist you in finding your next heirloom.
               </p>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 p-3 rounded-full text-primary">
-                  <MapPin size={24} />
+                <div className="bg-primary/10 p-3 rounded-full text-primary shrink-0">
+                  <MapPin className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
                 <div>
                   <h4 className="font-headline font-bold text-lg">Address</h4>
@@ -69,26 +73,26 @@ export function ContactSection() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 p-3 rounded-full text-primary">
-                  <Phone size={24} />
+                <div className="bg-primary/10 p-3 rounded-full text-primary shrink-0">
+                  <Phone className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
                 <div>
                   <h4 className="font-headline font-bold text-lg">Phone</h4>
-                  <p className="text-muted-foreground">+91 97207 98940</p>
+                  <p className="text-muted-foreground break-words">+91 97207 98940</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 p-3 rounded-full text-primary">
-                  <Mail size={24} />
+                <div className="bg-primary/10 p-3 rounded-full text-primary shrink-0">
+                  <Mail className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
                 <div>
                   <h4 className="font-headline font-bold text-lg">Email</h4>
-                  <p className="text-muted-foreground">inquiries@rameshjewellers.com</p>
+                  <p className="text-muted-foreground break-words">ramesh.mourya.ji222@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 p-3 rounded-full text-primary">
-                  <Clock size={24} />
+                <div className="bg-primary/10 p-3 rounded-full text-primary shrink-0">
+                  <Clock className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
                 <div>
                   <h4 className="font-headline font-bold text-lg">Business Hours</h4>
@@ -98,8 +102,8 @@ export function ContactSection() {
             </div>
           </div>
 
-          <div className="bg-white p-8 md:p-12 shadow-2xl rounded-sm border-t-4 border-primary">
-            <h3 className="text-2xl font-headline font-bold mb-8 text-secondary text-center">Inquiry Form</h3>
+          <div className="bg-card p-6 sm:p-8 md:p-12 shadow-2xl rounded-sm border border-primary/20">
+            <h3 className="text-xl sm:text-2xl font-headline font-bold mb-6 sm:mb-8 text-foreground text-center">Inquiry Form</h3>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
@@ -109,7 +113,11 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Full Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Enter your name" {...field} className="rounded-none border-0 border-b border-muted bg-muted/10 focus-visible:ring-0 focus-visible:border-primary transition-colors" />
+                        <Input
+                          placeholder="Enter your name"
+                          {...field}
+                          className="rounded-sm border border-border bg-background focus-visible:ring-0 focus-visible:border-primary transition-colors"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -122,7 +130,11 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Email Address</FormLabel>
                       <FormControl>
-                        <Input placeholder="name@example.com" {...field} className="rounded-none border-0 border-b border-muted bg-muted/10 focus-visible:ring-0 focus-visible:border-primary transition-colors" />
+                        <Input
+                          placeholder="name@example.com"
+                          {...field}
+                          className="rounded-sm border border-border bg-background focus-visible:ring-0 focus-visible:border-primary transition-colors"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -135,7 +147,11 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Phone Number (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder="+91" {...field} className="rounded-none border-0 border-b border-muted bg-muted/10 focus-visible:ring-0 focus-visible:border-primary transition-colors" />
+                        <Input
+                          placeholder="+91"
+                          {...field}
+                          className="rounded-sm border border-border bg-background focus-visible:ring-0 focus-visible:border-primary transition-colors"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -148,7 +164,11 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Your Message</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Tell us about the piece you're looking for..." {...field} className="rounded-none border-0 border-b border-muted bg-muted/10 min-h-[120px] focus-visible:ring-0 focus-visible:border-primary transition-colors" />
+                        <Textarea
+                          placeholder="Tell us about the piece you're looking for..."
+                          {...field}
+                          className="rounded-sm border border-border bg-background min-h-[120px] focus-visible:ring-0 focus-visible:border-primary transition-colors"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
